@@ -8,7 +8,6 @@ ENV SDK_VERSION 26.0.1
 ENV TOOLS_VERSION 25.2.5
 ENV PLATFORM_VERSION 25
 
-COPY tools ${ANDROID_HOME}/tools
 RUN cd ${ANDROID_HOME} && wget -O android-sdk.zip https://dl.google.com/android/repository/tools_r${TOOLS_VERSION}-linux.zip \
  && unzip android-sdk.zip \
  && rm -f android-sdk.zip
