@@ -13,7 +13,9 @@ RUN cd ${ANDROID_HOME} && wget -O android-sdk.zip https://dl.google.com/android/
  && rm -f android-sdk.zip
 
 RUN cd ${ANDROID_HOME} \
- && yes | tools/bin/sdkmanager "tools" "platforms;android-15" "platforms;android-16" "platforms;android-17" "platforms;android-18" "platforms;android-19" "platforms;android-20" "platforms;android-21" "platforms;android-22" "platforms;android-23" "platforms;android-24" "platforms;android-25"
+ && yes "y\n" | tools/bin/sdkmanager "tools" "platforms;android-15" "platforms;android-16" "platforms;android-17" "platforms;android-18" "platforms;android-19" "platforms;android-20" "platforms;android-21" "platforms;android-22" "platforms;android-23" "platforms;android-24" "platforms;android-25"
+
+RUN apt-get update; apt-get install python-pip -y; pip install --upgrade --user awscli
 
 USER gradle
 ENV ANDROID_HOME /opt/android-sdk
