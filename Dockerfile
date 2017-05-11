@@ -31,8 +31,5 @@ RUN \
 	&& unzip awscli-bundle.zip \
 	&& ./awscli-bundle/install -i /usr/local/aws -b /usr/local/bin/aws
 
-RUN \
-	gradle installDebug
-
 USER gradle
 WORKDIR /opt/workspace
