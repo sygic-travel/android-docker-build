@@ -5,9 +5,9 @@ FROM openjdk:8-jdk
 CMD ["gradle"]
 
 ENV GRADLE_HOME /opt/gradle
-ENV GRADLE_VERSION 4.0-rc-1
+ENV GRADLE_VERSION 4.0
 
-ARG GRADLE_DOWNLOAD_SHA256=19d7be3fd349bcf0d36d5a29ded4dd704e5d391e8e8751f32d5bb199636df053
+ARG GRADLE_DOWNLOAD_SHA256=56bd2dde29ba2a93903c557da1745cafd72cdd8b6b0b83c05a40ed7896b79dfe
 RUN \
 	set -o errexit -o nounset \
 	&& echo "Downloading Gradle" \
