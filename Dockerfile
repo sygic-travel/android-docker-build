@@ -73,7 +73,11 @@ RUN \
 	yes | tools/bin/sdkmanager "platforms;android-${PLATFORM_VERSION}" && \
 	yes | tools/bin/sdkmanager "platform-tools" && \
 	yes | tools/bin/sdkmanager "build-tools;${BUILD_TOOLS_VERSION}" && \
-	yes | tools/bin/sdkmanager "tools"
+	yes | tools/bin/sdkmanager "tools" && \
+	yes | tools/bin/sdkmanager "extras;google;m2repository" && \
+	yes | tools/bin/sdkmanager "extras;android;m2repository" && \
+	yes | tools/bin/sdkmanager "extras;m2repository;com;android;support;constraint;constraint-layout;1.0.2" && \
+	yes | tools/bin/sdkmanager "extras;m2repository;com;android;support;constraint;constraint-layout-solver;1.0.2"
 
 # Download Amazon CLI so we can upload to S3
 WORKDIR /opt
