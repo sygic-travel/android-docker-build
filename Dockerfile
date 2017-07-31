@@ -5,7 +5,7 @@ FROM openjdk:8-jdk
 CMD ["gradle"]
 
 ENV GRADLE_HOME /opt/gradle
-ENV GRADLE_VERSION 4.1-milestone-1
+ENV GRADLE_VERSION 4.1-rc-1
 
 RUN \
 	set -o errexit -o nounset \
