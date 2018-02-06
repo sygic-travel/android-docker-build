@@ -1,4 +1,4 @@
-FROM circleci/android:api-26-node8-alpha
+FROM circleci/android:api-27-node8-alpha
 
 RUN sudo pip install --upgrade pip setuptools && \
 	sudo pip --no-cache-dir install awscli
