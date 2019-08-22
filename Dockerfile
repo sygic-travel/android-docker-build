@@ -1,4 +1,4 @@
-FROM circleci/android:api-28-node
+FROM circleci/android:api-29-node
 
 RUN sudo pip install --upgrade pip setuptools && \
 	sudo pip --no-cache-dir install awscli
